@@ -53,7 +53,7 @@ export default class Venom {
                     headless: true,
                     logQR: true,
                     browserWS: '', //browserless !=  '' ? browserless.replace('https://', 'wss://')+'?token='+token_browser : '',
-                    useChrome: true,
+                    useChrome: false,
                     updatesLog: true,
                     autoClose: 90000,
                     disableSpins: false,
