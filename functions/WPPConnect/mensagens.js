@@ -27,6 +27,11 @@ export default class Mensagens {
         }
         else {
             try {
+                console.log('typing message.....')
+                await data.client.startTyping(number);
+                console.log('stop typing message.....')
+                await data.client.stopTyping(number);
+
                 let response = await data.client.sendText(number, req.body.text)
                 return res.status(200).json({
                     result: 200,
