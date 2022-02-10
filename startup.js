@@ -52,6 +52,8 @@ async function startAllSessions() {
             console.log('### Verifique as permissões de escrita e leitura ###')
         } else {
             dados.map((item) => {
+                console.log(`####-- ${config} --####`)
+
                 var options = {
                     'method': 'POST',
                     'json': true,
