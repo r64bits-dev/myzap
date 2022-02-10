@@ -81,6 +81,8 @@ node -v
 git clone https://github.com/billbarsch/myzap
 cd myzap
 npm install --allow-root --unsafe-perm=true
+npm update
+npm update @wppconnect-team/wppconnect
 cp .env_exemplo .env
 ```
 
