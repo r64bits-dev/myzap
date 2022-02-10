@@ -52,12 +52,10 @@ async function startAllSessions() {
             console.log('### Verifique as permissões de escrita e leitura ###')
         } else {
             dados.map((item) => {
-                console.log(`####-- ${JSON.stringify(config)} --####`)
-
                 var options = {
                     'method': 'POST',
                     'json': true,
-                    'url': `${config.host}:${config.port}/start`,
+                    'url': `http://localhost:${config.port}/start`,
                     'headers': {
                         'apitoken': item.apitoken,
                         'sessionkey': item.sessionkey
