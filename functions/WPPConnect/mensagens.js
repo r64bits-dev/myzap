@@ -32,7 +32,9 @@ export default class Mensagens {
                     setTimeout(function(){
                         console.log('typing message.....')
                         await data.client.startTyping(number);
+                        loopIndex ++;
                     },500);
+
                 }
               
                 console.log('stop typing message.....')
