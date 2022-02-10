@@ -29,12 +29,10 @@ export default class Mensagens {
             try {
                 let loopIndex = 10;
                 while(loopIndex <= 10){
-                    setTimeout(function(){
-                        console.log('typing message.....')
-                        await data.client.startTyping(number);
-                        loopIndex ++;
-                    },500);
-
+                    await Promise.all([
+                        data.client.startTyping(number).then((_)=> console.log('typing message.....')),
+                        timeout(500)
+                    ]);
                 }
               
                 console.log('stop typing message.....')
@@ -57,6 +55,10 @@ export default class Mensagens {
                 })
             }
         }
+    }
+
+    static timeout(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     static async sendImage(req, res) {
