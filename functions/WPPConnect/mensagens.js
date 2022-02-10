@@ -27,8 +27,14 @@ export default class Mensagens {
         }
         else {
             try {
-                console.log('typing message.....')
-                await data.client.startTyping(number);
+                let loopIndex = 10;
+                while(loopIndex <= 10){
+                    setTimeout(function(){
+                        console.log('typing message.....')
+                        await data.client.startTyping(number);
+                    },500);
+                }
+              
                 console.log('stop typing message.....')
                 await data.client.stopTyping(number);
 
