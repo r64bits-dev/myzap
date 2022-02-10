@@ -55,7 +55,7 @@ async function startAllSessions() {
                 var options = {
                     'method': 'POST',
                     'json': true,
-                    'url': `http://localhost:${config.port}/start`,
+                    'url': `https://${config.host}:${config.port}/start`,
                     'headers': {
                         'apitoken': item.apitoken,
                         'sessionkey': item.sessionkey
