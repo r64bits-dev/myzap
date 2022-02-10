@@ -29,23 +29,16 @@ export default class Mensagens {
             try {
                 console.log('typing message.....')
                 await data.client.startTyping(number);
-                setTimeout({},500);
                 console.log('typing message.....')
                 await data.client.startTyping(number);
-                setTimeout({},500);
                 console.log('typing message.....')
                 await data.client.startTyping(number);
-                setTimeout({},500);
                 console.log('typing message.....')
                 await data.client.startTyping(number);
-                setTimeout({},500);
                 console.log('typing message.....')
                 await data.client.startTyping(number);
-                setTimeout({},500);
                 console.log('typing message.....')
                 await data.client.startTyping(number);
-                setTimeout({},500);
-              
                 console.log('stop typing message.....')
                 await data.client.stopTyping(number);
 
