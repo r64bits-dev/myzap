@@ -30,7 +30,7 @@ export default class Mensagens {
                 console.log('typing message.....')
                 await data.client.startTyping(number);
                 
-                await new Promise(resolve => setTimeout(resolve, 3000));
+                await new Promise(resolve => setTimeout(resolve, 1500));
 
                 console.log('stop typing message.....')
                 await data.client.stopTyping(number);
