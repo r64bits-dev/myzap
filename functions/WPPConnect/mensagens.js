@@ -27,16 +27,8 @@ export default class Mensagens {
         }
         else {
             try {
-                console.log('typing message.....')
-                await data.client.startTyping(number);
-                
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                let response = await data.client.sendText(number, req.body.text);
 
-                let response = await data.client.sendText(number, req.body.text)
-
-                console.log('stop typing message.....')
-                await data.client.stopTyping(number);
-                
                 return res.status(200).json({
                     result: 200,
                     type: 'text',
