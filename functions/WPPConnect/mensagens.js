@@ -27,13 +27,13 @@ export default class Mensagens {
         }
         else {
             try {
-                console.log('typing message.....')
+                /*console.log('typing message.....')
                 await data.client.startTyping(number);
                 
                 await new Promise(resolve => setTimeout(resolve, 1500));
 
                 console.log('stop typing message.....')
-                await data.client.stopTyping(number);
+                await data.client.stopTyping(number);*/
 
                 let response = await data.client.sendText(number, req.body.text)
                 return res.status(200).json({
