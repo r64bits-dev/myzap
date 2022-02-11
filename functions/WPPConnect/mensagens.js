@@ -30,7 +30,7 @@ export default class Mensagens {
                 console.log('typing message.....')
                 await data.client.startTyping(number);
                 
-                pausecomp(3000);
+                await sleep(3000);
 
                 console.log('stop typing message.....')
                 await data.client.stopTyping(number);
@@ -54,12 +54,8 @@ export default class Mensagens {
         }
     }
 
-    static pausecomp(millis)
-    {
-        var date = new Date();
-        var curDate = null;
-        do { curDate = new Date(); }
-        while(curDate-date < millis);
+    static sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     static async sendImage(req, res) {
